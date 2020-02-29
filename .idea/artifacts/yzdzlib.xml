@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="yzdzlib">
+    <output-path>$PROJECT_DIR$/out/artifacts/yzdzlib</output-path>
+    <root id="archive" name="yzdzlib.jar">
+      <element id="module-output" name="YzdzLib" />
+    </root>
+  </artifact>
+</component>
