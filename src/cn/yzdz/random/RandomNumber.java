@@ -21,11 +21,17 @@ public class RandomNumber {
      * 使用 Math.ramdom 执行
      * 在 math.random * max 之后进行了 + 1操作
      * 所以使用时,请考虑情况
+     * 此方法是一个静态方法,所以可以尽管调用
+     *
+     * 加入boolean 变量,使用该布尔变量,可以取到 0
+     * 但请小心 数学异常
      *
      * @param max 最大值
-     * @return 随机数
+     * @param isZero 是否取零
+     * @return 随机整数 int
      */
-    public int randomInt(int max) {
-        return (int) (Math.random() * max) + 1;
+    public static int randomInt(int max,boolean isZero) {
+        int result = (int) (Math.random() * max);
+        return isZero ? result + 1 : result;
     }
 }
