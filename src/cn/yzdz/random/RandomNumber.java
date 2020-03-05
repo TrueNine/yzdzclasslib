@@ -12,7 +12,7 @@ public class RandomNumber {
     /**
      * 空构造器
      */
-    RandomNumber() {
+    public RandomNumber() {
 
     }
 
