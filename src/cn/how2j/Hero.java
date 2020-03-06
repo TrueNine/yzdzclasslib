@@ -76,6 +76,16 @@ public class Hero {
     }
 
     /**
+     * 杀人 kull 方法
+     * 在此方法调用 Mortal 接口的方法
+     *
+     * @param mortal Mortal 接口类型
+     */
+    public void kill(Mortal mortal) {
+        mortal.die();
+    }
+
+    /**
      * 重写的 toString 方法
      * 打印英雄的一些数据
      *
