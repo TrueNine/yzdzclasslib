@@ -1,4 +1,4 @@
-package cn.how2j;
+package cn.how2j.interfaces;
 
 /**
  * 类作用: 接口

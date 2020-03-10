@@ -1,5 +1,7 @@
 package cn.how2j;
 
+import cn.how2j.interfaces.Mortal;
+
 /**
  * 类作用: 工具类
  * 类说明: 因为how2j太喜欢使用英雄作为例子了
