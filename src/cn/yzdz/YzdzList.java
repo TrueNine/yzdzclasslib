@@ -7,7 +7,7 @@ package cn.yzdz;
  * @author 彭继工
  * @date 2020-03-09:16:17
  */
-public class YzdzList <T> {
+public class YzdzList <T extends Object> {
 
     /** 容器内字符串长度 */
     private int size;
@@ -108,6 +108,7 @@ public class YzdzList <T> {
      * @param index 索引
      * @return T
      */
+    @SuppressWarnings("unchecked")
     public T get(int index) {
         if (index < 0 || index > size - 1) {
             throw new RuntimeException("索引越界");

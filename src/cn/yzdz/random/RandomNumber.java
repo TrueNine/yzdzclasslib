@@ -36,6 +36,7 @@ public class RandomNumber {
      * @return 整数 int
      */
     private static int randomInt(int max) {
+        isOutZero(max);
         return (int) (Math.random() * max);
     }
 
@@ -45,15 +46,12 @@ public class RandomNumber {
      * isZero 控制是否取零,如果不取零,则直接给予 false,调用私有方法
      * 如果传入的值 小于等于 0,则会抛出异常
      *
-     * @param max 最大取值范围
+     * @param max    最大取值范围
      * @param isZero 是否取零
      * @return 整数 int
      */
-    public static int randomInt(int max,boolean isZero) {
-        // 非零负数排除
-        if (0 >= max) {
-            throw new RuntimeException("数值越界,不能是 0 或 负数");
-        }
+    public static int randomInt(int max, boolean isZero) {
+        isOutZero(max);
         return isZero ? randomInt(max) : randomInt(max) + 1;
     }
 
@@ -63,10 +61,10 @@ public class RandomNumber {
      * 会取到 0
      *
      * @param beforeRange 范围最小值
-     * @param afterRange 范围最大值
+     * @param afterRange  范围最大值
      * @return 整数 int
      */
-    private static int randomInt(int beforeRange,int afterRange) {
+    private static int randomInt(int beforeRange, int afterRange) {
         return (int) (Math.random() * (afterRange - beforeRange)) + beforeRange;
     }
 
@@ -77,14 +75,39 @@ public class RandomNumber {
      * 如果传入的数值 小于等于 0,则会抛出异常
      *
      * @param beforeRange 最小值
-     * @param afterRange 最大值
-     * @param isZero 是否取零
+     * @param afterRange  最大值
+     * @param isZero      是否取零
      * @return 整数 int
      */
-    public static int randomInt(int beforeRange,int afterRange,boolean isZero) {
-        if (0 >= beforeRange || 0 >= afterRange) {
-            throw new RuntimeException("数值越界,不能是 0 或 负数");
+    public static int randomInt(int beforeRange, int afterRange, boolean isZero) {
+        isOutZero(beforeRange, afterRange);
+        return isZero ? randomInt(beforeRange, afterRange) : randomInt(beforeRange, afterRange) + 1;
+    }
+
+    /**
+     * 返回固定范围内的 long 类型数值
+     * 注意: 此处不进行 0 值判断,可以取到负数
+     *
+     * @param before 最小值
+     * @param after  最大值
+     * @param isZero 是否取零
+     * @return long
+     */
+    public static long randomLong(long before, long after, boolean isZero) {
+        long temp = (long) (Math.random() * (after - before)) + before;
+        return isZero ? temp : temp + 1;
+    }
+
+    /**
+     * 用于判断异常
+     *
+     * @param number double 类型(可变参数)
+     */
+    private static void isOutZero(double... number) {
+        for (double temp : number) {
+            if (0 >= temp) {
+                throw new RuntimeException("数值越界,不能是 0 或 负数");
+            }
         }
-        return isZero ? randomInt(beforeRange,afterRange) : randomInt(beforeRange,afterRange) + 1;
     }
 }

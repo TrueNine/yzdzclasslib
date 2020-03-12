@@ -1,6 +1,9 @@
 package TestUtils;
 
 import cn.how2j.YzdzStringBuffer;
+import cn.yzdz.random.RandomString;
+
+import java.util.ArrayList;
 
 /**
  * 测试类
@@ -14,27 +17,6 @@ public class Test {
     private Test(){}
 
     public static void main(String[] args) {
-        YzdzStringBuffer f = new YzdzStringBuffer();
-        for (int i = '0'; i < '9'; i++) {
-            char temp = (char) i;
-            f.append(temp);
 
-        }
-        print(f);
-        f.delete(0,8);
-        print(f);
-
-        StringBuffer buffer = new StringBuffer();
-        for (int i = '0'; i < '9'; i++) {
-            char temp = (char) i;
-            buffer.append(temp);
-        }
-        System.out.println(buffer);
-        buffer.delete(0,8);
-        System.out.println(buffer);
-    }
-    private static void print(YzdzStringBuffer f) {
-        System.out.println(f);
-        System.out.println(f.test());
     }
 }
