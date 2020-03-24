@@ -1,7 +1,9 @@
 package TestUtils;
 
 import cn.how2j.YzdzStringBuffer;
+import cn.yzdz.random.RandomChar;
 import cn.yzdz.random.RandomString;
+import cn.yzdz.random.RandomStringX;
 
 import java.util.ArrayList;
 
@@ -17,6 +19,7 @@ public class Test {
     private Test(){}
 
     public static void main(String[] args) {
-
+        RandomStringX x = new RandomStringX();
+        System.out.println(x.letter().number().chinese().build(24));
     }
 }

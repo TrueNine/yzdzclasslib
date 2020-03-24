@@ -18,7 +18,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char charAll() {
-        return (char) RandomNumber.randomInt(ASCII_RANGE_MIN, ASCII_RANGE_MAX,false);
+        return (char) RandomNumber.randomInt(ASCII_RANGE_MIN + 1, ASCII_RANGE_MAX,false);
     }
 
     /**
@@ -50,16 +50,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char uppercaseLetter() {
-        // 防空操作
-        char result = ' ';
-        while (true) {
-            // 一直循环判断是否是大写字母
-            result = this.letter();
-            if ( ! Character.isUpperCase(result)) {
-                continue;
-            }
-            return result;
-        }
+       return (char) RandomNumber.randomInt(ASCII_UPPERCASE_LETTER_RANGE_MIN,ASCII_LOWERCASE_LETTER_RANGE_MAX + 1,true);
     }
 
     /**
@@ -71,15 +62,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
     @Override
     public char lowercaseLetter() {
         // 防空操作
-        char result = ' ';
-        while (true) {
-            // 一直循环判断是否是小写字母
-            result = this.letter();
-            if ( ! Character.isLowerCase(result)) {
-                continue;
-            }
-            return result;
-        }
+        return (char) RandomNumber.randomInt(ASCII_LOWERCASE_LETTER_RANGE_MIN,ASCII_LOWERCASE_LETTER_RANGE_MAX + 1,true);
     }
 
     /**
@@ -90,16 +73,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char number() {
-        // 防空操作
-        char result = ' ';
-        while (true) {
-            // 一直循环判断是否是数字类型的 char
-            result = this.charAll();
-            if ( ! Character.isDigit(result)) {
-                continue;
-            }
-            return result;
-        }
+        return (char) RandomNumber.randomInt(ASCII_NUMBER_RANGE_MIN,ASCII_NUMBER_RANGE_MAX + 1,true);
     }
 
     /**
@@ -129,7 +103,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char chinese() {
-        return (char) RandomNumber.randomInt(UNICODE_CHINESE_MIN,UNICODE_CHINESE_MAX,false);
+        return (char) RandomNumber.randomInt(UNICODE_CHINESE_MIN,UNICODE_CHINESE_MAX + 1,false);
     }
 
     /**

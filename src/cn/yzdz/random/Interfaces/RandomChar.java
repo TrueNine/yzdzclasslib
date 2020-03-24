@@ -11,7 +11,7 @@ public interface RandomChar {
     int UNICODE_CHINESE_MAX = '\u9fa5';
     int UNICODE_CHINESE_MIN = '\u4e00';
     byte ASCII_RANGE_MAX = 126;
-    byte ASCII_RANGE_MIN = 33;
+    byte ASCII_RANGE_MIN = 32;
     byte ASCII_UPPERCASE_LETTER_RANGE_MAX = 'Z';
     byte ASCII_UPPERCASE_LETTER_RANGE_MIN = 'A';
     byte ASCII_LOWERCASE_LETTER_RANGE_MAX = 'z';
