@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/YzdzLib.iml" filepath="$PROJECT_DIR$/YzdzLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yzdzclasslib.iml" filepath="$PROJECT_DIR$/yzdzclasslib.iml" />
     </modules>
   </component>
 </project>
