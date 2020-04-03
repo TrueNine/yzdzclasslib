@@ -18,7 +18,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char charAll() {
-        return (char) RandomNumber.randomInt(ASCII_RANGE_MIN + 1, ASCII_RANGE_MAX,false);
+        return (char) RandomNumber.randomInt(ASCII_RANGE_MIN, ASCII_RANGE_MAX + 1,true);
     }
 
     /**
@@ -50,7 +50,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char uppercaseLetter() {
-       return (char) RandomNumber.randomInt(ASCII_UPPERCASE_LETTER_RANGE_MIN,ASCII_LOWERCASE_LETTER_RANGE_MAX + 1,true);
+       return (char) RandomNumber.randomInt(ASCII_UPPERCASE_LETTER_RANGE_MIN,ASCII_UPPERCASE_LETTER_RANGE_MAX + 1,true);
     }
 
     /**
@@ -103,7 +103,7 @@ public class RandomChar implements cn.yzdz.random.Interfaces.RandomChar {
      */
     @Override
     public char chinese() {
-        return (char) RandomNumber.randomInt(UNICODE_CHINESE_MIN,UNICODE_CHINESE_MAX + 1,false);
+        return (char) RandomNumber.randomInt(UNICODE_CHINESE_MIN,UNICODE_CHINESE_MAX + 1,true);
     }
 
     /**
